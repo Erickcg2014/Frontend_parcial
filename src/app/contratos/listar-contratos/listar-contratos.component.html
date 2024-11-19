@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Lista de Contratos</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Identificador</th>
+        <th>Valor</th>
+        <th>Contratante</th>
+        <th>Contratista</th>
+        <th>Fecha Inicial</th>
+        <th>Fecha Final</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contrato of contratos">
+        <td>{{ contrato.id }}</td>
+        <td>{{ contrato.identificador }}</td>
+        <td>{{ contrato.valor }}</td>
+        <td>{{ contrato.nombreContratante }}</td>
+        <td>{{ contrato.nombreContratantista }}</td>
+        <td>{{ contrato.fechaInicial | date: 'yyyy-MM-dd' }}</td>
+        <td>{{ contrato.fechaFinal | date: 'yyyy-MM-dd' }}</td>
+
+        <td>
+          <button class="btn btn-primary" [routerLink]="['/editar', contrato.id]">Editar</button>
+          <button class="btn btn-danger" (click)="eliminarContrato(contrato.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

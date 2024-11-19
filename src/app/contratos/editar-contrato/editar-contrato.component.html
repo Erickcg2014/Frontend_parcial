@@ -1,0 +1,97 @@
+<div class="container">
+  <h1>Editar Contrato</h1>
+  <form #editForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="identificador">Identificador</label>
+      <input
+        type="text"
+        id="identificador"
+        name="identificador"
+        [(ngModel)]="contrato.identificador"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="valor">Valor</label>
+      <input
+        type="number"
+        id="valor"
+        name="valor"
+        [(ngModel)]="contrato.valor"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="nombreContratante">Nombre del Contratante</label>
+      <input
+        type="text"
+        id="nombreContratante"
+        name="nombreContratante"
+        [(ngModel)]="contrato.nombreContratante"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="documentoContratante">Documento del Contratante</label>
+      <input
+        type="text"
+        id="documentoContratante"
+        name="documentoContratante"
+        [(ngModel)]="contrato.documentoContratante"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="nombreContratantista">Nombre del Contratista</label>
+      <input
+        type="text"
+        id="nombreContratantista"
+        name="nombreContratantista"
+        [(ngModel)]="contrato.nombreContratantista"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="documentoContratantista">Documento del Contratista</label>
+      <input
+        type="text"
+        id="documentoContratantista"
+        name="documentoContratantista"
+        [(ngModel)]="contrato.documentoContratantista"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="fechaInicial">Fecha Inicial</label>
+      <input
+        type="date"
+        id="fechaInicial"
+        name="fechaInicial"
+        [(ngModel)]="contrato.fechaInicial"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="fechaFinal">Fecha Final</label>
+      <input
+        type="date"
+        id="fechaFinal"
+        name="fechaFinal"
+        [(ngModel)]="contrato.fechaFinal"
+        class="form-control"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <button type="button" class="btn btn-secondary" (click)="router.navigate(['/listar'])">
+      Cancelar
+    </button>
+  </form>
+</div>
