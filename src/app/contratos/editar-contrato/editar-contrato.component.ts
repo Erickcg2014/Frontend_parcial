@@ -6,7 +6,7 @@ import { Contrato } from '../contrato.model';
 @Component({
   selector: 'app-editar-contrato',
   templateUrl: './editar-contrato.component.html',
-  styleUrls: ['./editar-contrato.component.scss'],
+  styleUrls: ['./editar-contrato.component.css'],
 })
 export class EditarContratoComponent implements OnInit {
   contrato: Contrato = {
